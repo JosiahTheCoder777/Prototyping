@@ -26,7 +26,7 @@ I worked on fixing my errors and refining my comments
 ### What challenges did you have?
 Figuring out syntax, understanding english.
 ### What do you plan to do tomorrow?
-Pray.
+Pray and lock in.
 ## Day 4 (11/21)
 
 ### What did you do?

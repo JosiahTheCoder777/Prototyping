@@ -7,6 +7,12 @@ import org.tahomarobotics.robot.util.SubsystemIF;
 
 public class Collector extends SubsystemIF {
     private static final Collector INSTANCE = new Collector();
+    public static Collector getInstance() {
+        return INSTANCE;
+    }
+    private boolean shouldEject = false;
+    private boolean shouldCollect = false;
+    private boolean shouldDeploy = false;
 
     // MOTORS
     private final TalonFX deployLeft = new TalonFX(RobotMap.DEPLOY_MOTOR_LEFT);
@@ -177,3 +183,7 @@ public class Collector extends SubsystemIF {
         EJECT
     }
 }
+
+
+
+
