@@ -62,14 +62,18 @@ public class Collector extends SubsystemIF {
         }
         switch (collectionState) {
             case COLLECTING -> {
-                if (!shouldCollect) -> collectionDisabled();
-                if (shouldCollect) -> collectionEject();
+                if (!shouldCollect) {
+                    collectionDisabled();
+                }
+                if (shouldCollect) {
+                    collectionEject();
+                }
             }
             case EJECTING -> {
             }
             case DISABLED -> {
-                if (isLeftTriggerPressed) -> collectionCollect();
-                if (isLeftDPadPressed) -> collectionEject();
+                if (isLeftTriggerPressed) {collectionCollect();}
+                if (isLeftDPadPressed) {collectionEject();}
             }
         }
     }
@@ -174,7 +178,8 @@ public class Collector extends SubsystemIF {
     public enum CollectionState {
         COLLECTING,
         DISABLED,
-        EJECTING
+        EJECTING,
+        ZEROING
     }
 
     public enum DeploymentState {
